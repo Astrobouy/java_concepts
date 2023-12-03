@@ -7,7 +7,7 @@ public class Day8 {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		ArrayList<String> list = new ArrayList<>();
+		ArrayList<String> groceryList = new ArrayList<>();
 		System.out.println("Grocery List: ");
 		
 		while(true) {
@@ -17,27 +17,27 @@ public class Day8 {
 			}
 			
 			if(item.contains("print")) {
-				System.out.println(list);
+				System.out.println(groceryList);
 				continue;
 			}
 			
 			if(item.contains("remove")) {
 				String [] itemArray = item.split(" ");
 				String removedItem = itemArray[1];
-				list.remove(removedItem);
+				groceryList.remove(removedItem);
 				continue;
 			}
 			
-			if(list.contains(item)) {
+			if(groceryList.contains(item)) {
 				System.out.println("list already contains " + item);
 				continue;
 			}
 			if(item.contains("clear")) {
-				list.clear();
+				groceryList.clear();
 				continue;
 			}
 			
-			list.add(item);
+			groceryList.add(item);
 		}
 		scanner.close();
 	}
