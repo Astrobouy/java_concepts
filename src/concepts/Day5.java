@@ -1,12 +1,14 @@
 package concepts;
-
+import java.util.Scanner;
 
 public class Day5 {
 
 	public static void main(String[] args) {
-		int num1 = 10;
-		int num2 = 5;
-		char operator = '/';
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("what would you like to calculate?");
+		int num1 = scanner.nextInt();
+		char operator = scanner.next().charAt(0);
+		int num2 = scanner.nextInt();
 		
 		System.out.println("" + num1 + " " + operator + " " + num2 + " = " + Calculator(num1, operator, num2));
 	}
