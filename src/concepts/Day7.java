@@ -20,7 +20,7 @@ public class Day7 {
 		}
 		mean = (double)sum/intArray.length;
 		System.out.println("Sum: " + sum);
-		System.out.println("Average: " + mean);
+		System.out.printf("Average: %.2f\n", mean);
 		System.out.println("Maximum: " + maxNumber);
 		System.out.println("Minimum: " + minNumber);
 	}
