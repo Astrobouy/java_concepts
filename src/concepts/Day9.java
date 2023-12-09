@@ -13,12 +13,12 @@ public class Day9 {
 		HashMap<String, Integer> map = new HashMap<>();
 		
 		int num = 1;
-		for(int i = 0; i < array.length; i++) {
-			if(map.containsKey(array[i])) {
+		for(String word: array) {
+			if(map.containsKey(word)) {
 				
-				map.put(array[i], num + 1);
+				map.put(word, num + 1);
 			}else {
-				map.put(array[i], num);
+				map.put(word, num);
 			}
 		}
 		ArrayList<String> list = new ArrayList<>();
